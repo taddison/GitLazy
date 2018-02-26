@@ -1,3 +1,7 @@
+### TODO ###
+- Inspiration from https://github.com/ArafatHusayn/git-urgent/blob/master/extension.js
+- More from https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/helpers/exec.ts
+
 # gitlazy README
 
 This is the README for your extension "gitlazy". After writing up a brief description, we recommend including the following sections.
