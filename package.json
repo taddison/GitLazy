@@ -1,8 +1,8 @@
 {
     "name": "gitlazy",
     "displayName": "GitLazy",
-    "description": "Add, commit and push with a single command",
-    "version": "1.0.0",
+    "description": "Add, commit, and push with a single command",
+    "version": "1.0.2",
     "publisher": "taddison",
     "author": {
 		"name": "timothyaddison"
@@ -17,6 +17,7 @@
     "activationEvents": [
         "onCommand:gitlazy.addCommitPush"
     ],
+    "icon": "images/git.png",
     "main": "./out/extension",
     "contributes": {
         "commands": [

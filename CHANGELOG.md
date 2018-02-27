@@ -9,3 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.0.0] - 2018-02-28
 ### Added
 - Support for the `addCommitPush` command
+
+## [1.0.2] - 2018-02-28
+### Updated
+- Updated readme and package

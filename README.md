@@ -1,6 +1,10 @@
-# GitLazy README
+# GitLazy
 
-Helper function to add/commit/push in one go.  Inspired by [Git-Urgent](https://github.com/ArafatHusayn/git-urgent/) and [Git-Add-And-Commit](https://github.com/ivangabriele/vscode-git-add-and-commit/).  Parts of this extension utilise code modified from the Git-Add-And-Commit extension, mainly [exec.ts](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/helpers/exec.ts).
+Add/commit/push in one command.
+
+Inspired by [Git-Urgent](https://github.com/ArafatHusayn/git-urgent/) and [Git-Add-And-Commit](https://github.com/ivangabriele/vscode-git-add-and-commit/).
+
+Parts of this extension utilise code modified from the Git-Add-And-Commit extension, mainly [exec.ts](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/helpers/exec.ts).
 
 ## Features
 
@@ -22,4 +26,4 @@ Please log any issues on the [GitHub repo](https://github.com/taddison/gitlazy/i
 
 ## Release Notes
 
-See the [changelog](./Changelog.md).
+See the [changelog](https://github.com/taddison/GitLazy/blob/master/CHANGELOG.md).
