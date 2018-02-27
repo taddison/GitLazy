@@ -1,9 +1,13 @@
 {
     "name": "gitlazy",
     "displayName": "GitLazy",
-    "description": "Commit and push with a single command",
-    "version": "0.0.1",
+    "description": "Add, commit and push with a single command",
+    "version": "1.0.0",
     "publisher": "taddison",
+    "author": {
+		"name": "timothyaddison"
+	},
+    "license": "SEE LICENSE IN LICENSE",
     "engines": {
         "vscode": "^1.20.0"
     },
@@ -11,17 +15,32 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.addCommitPush"
+        "onCommand:gitlazy.addCommitPush"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.addCommitPush",
-                "title": "Add Commit Push"
+                "command": "gitlazy.addCommitPush",
+                "title": "GitLazy: Add Commit Push"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "GitLazy configuration",
+            "properties": {
+                "gitlazy.commitMessage": {
+                    "type": "string",
+                    "default": "Update",
+                    "description": "Commit message used when invoking a GitLazy commit command."
+                }
+            }
+        }
     },
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/taddison/gitlazy.git"
+	},
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
@@ -33,7 +52,6 @@
         "typescript": "^2.6.1",
         "vscode": "^1.1.6",
         "tslint": "^5.8.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/node": "^7.0.43"
     }
 }

@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import changeDirectory from './changeDirectory';
 import exec from './exec';
 
 export default async function commitAll(): Promise<void> {
@@ -8,21 +7,14 @@ export default async function commitAll(): Promise<void> {
         return;
     }
 
-    const workspaceRootAbsolutePath = ws[0].uri.fsPath;
+    let workspaceRootAbsolutePath = ws[0].uri.fsPath;
 
+    await process.chdir(workspaceRootAbsolutePath);
+
+    let commitMessage = vscode.workspace.getConfiguration('gitlazy').get<string>('commitMessage') || "Update";
+    
     try {
-        await changeDirectory(workspaceRootAbsolutePath);
-    }
-    catch (err) {
-        vscode.window.showErrorMessage(err);
-        console.error(err);
-
-        return;
-    }
-
-    try {
-        let message = "Update journal";
-        await exec('git', ['commit', '-m', `${message}`]);
+        await exec('git', ['commit', '-m', `${commitMessage}`]);
     }
     catch (err) {
         // Git warnings are also caught here, so let's ignore them
