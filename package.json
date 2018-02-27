@@ -37,10 +37,18 @@
             }
         }
     },
+    "homepage": "https://github.com/taddison/gitlazy/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/taddison/gitlazy/issues"
+    },
     "repository": {
 		"type": "git",
 		"url": "https://github.com/taddison/gitlazy.git"
-	},
+    },
+    "qna": false,
+    "keywords": [
+        "git"
+      ],
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
